@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>AushadhiScan</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"> -->
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+	
+
+	#logo {
+		font-family: "Sofia", sans-serif;
+		font-size: 39px;
+	}
+
+	#logolink {
+		color: white;
+		text-decoration: none;
+	}
+
+	.logo {
+		width: 182px;
+		display: flex;
+		justify-content: space-between;
+		margin-right: 900px;
+		margin-top: -30px;
+	}
+	#logopic{
+		border-radius: 50%;
+		width: 80px;
+		height: 70px;
+		padding-bottom: 10px;
+	}
+
+	.news-ticker-container {
+            width: 100%;
+            background-color: #f1f1f1;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            padding: 10px 0;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            position: relative;
+        }
+        .news-ticker {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 20s linear infinite;
+        }
+        .news-ticker a {
+            display: inline-block;
+            padding: 0 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            background-color: #ccc;
+            border: 3px solid #333;
+            overflow: hidden;
+        }
+        .slideshow img {
+            width: 100%;
+            display: none;
+        }
+        .slideshow img.active {
+            display: block;
+        }
+		
+
+	</style>
+
+</head>
+
+<body>
+	<nav class="navbar1" style="height: 125px; background-color: #3f5578;">
+		<ul class="navbar-nav1">
+			<!-- <div>
+				<a class="navbar-brand" href="index.html"><img src="./image/logo.png" alt="Logo" style="
+					max-width: 90px;
+					max-height: 100px;
+					border-radius: 50%;
+					margin-right: 840px;
+					margin-top: -50px;
+					margin-left: 10px;
+					"></a>
+			<span style="color: white;"> MediexLedger</span>
+			</div> -->
+			<a href="index.html" id="logolink" class="logo">
+				<img src="./image/logo1.png" alt="" id="logopic" style="height: 85px;">
+				<div id="logo" style="padding-left: 10px;">AushadhiScan </div>
+				
+			</a>
+			<div style="display: flex; padding: 10px; position: relative;">
+				<li class="nav-item1"><a href="index.html">Home</a></li>
+				<li class="nav-item1"><a href="about.html">About</a></li>
+				<li class="nav-item1"><a href="gallery.html">Gallery</a></li>
+				<li class="nav-item1"><a href="contract.html">Contact</a></li>
+				<!-- <li class="nav-item1" style="width: 60px;"><a href="#">Login</a></li> -->
+				<li class="nav-item1" style="width: 80px; padding-left: 50px;" >
+					<a href="#" style="background-color: transparent; border: 1px solid #14eb31; border-radius: 10%; padding: 5px 10px; text-decoration: none; color: white; transition: background-color 0.3s, color 0.3s;">
+						Login
+					</a>
+				</li>
+				
+				  
+			</div>
+		</ul>
+	</nav>
+
+	<div class="news-ticker-container">
+        <div class="news-ticker">
+            <a href="https://www.thehindu.com/news/national/counterfeit-medicines-of-about-2-crores-of-leading-manufacturers-seized/article67154464.ece" target="_blank">Counterfeit medicines of about ₹2 crores of leading manufacturers seized.</a>
+            <a href="https://www.pharmaceutical-technology.com/analyst-comment/drug-counterfeiting-is-rising-rapidly-in-emerging-markets/" target="_blank">Threat!!! Drug counterfeiting is rising rapidly in emerging markets.</a>
+            <a href="https://www.theguardian.com/science/2019/mar/11/fake-drugs-kill-more-than-250000-children-a-year-doctors-warn" target="_blank">Fake drugs kill more than 250,000 children a year, doctors warn.</a>
+            <a href="https://edition.cnn.com/2019/03/11/health/fake-drugs-killing-children-study/index.html" target="_blank">Global ‘pandemic’ of fake drugs killing children worldwide, report says.</a>
+        </div>
+    </div>
+
+    <div class="slideshow-container">
+        <div class="slideshow">
+            <img src="image/1.jpeg" class="slide active">
+            <img src="image/11.jpeg" class="slide">
+            <img src="image/gallery.png" class="slide">
+            <img src="image/13.jpeg" class="slide">
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].classList.add("active");
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+			<!-- <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+			<div class="container-fluid">
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="fa fa-bars"></span> Menu
+			</button>
+			<div class="collapse navbar-collapse" id="ftco-nav">
+				<ul class="navbar-nav m-auto">
+					<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+					<li class="nav-item "><a href="manufacturer.html" class="nav-link">Manufacturer</a></li>
+					<li class="nav-item"><a href="seller.html" class="nav-link">Seller</a></li>
+					<li class="nav-item"><a href="consumer.html" class="nav-link">Consumer</a></li>
+				</ul>
+			</div>
+			</div>
+		</nav> -->
+			<!-- END nav -->
+			
+			<!-- cards -->
+			<div class="card-container">
+				<div class="card" style="height: 350px;">
+					<img src="image/orderr.jpg" style="height: 200px;">
+					<div class="card-content" style="padding: 25px;">
+						<h3>Add Medicine</h3>
+						<a href="addmedicine.html" class="btn" style="display:flow; background-color: #3f5578;">Click Here</a>
+					</div>
+				</div>
+				<div class="card" style="height: 350px;">
+					<img src="image/manufacturer.jpeg" style="height: 200px;">
+					<div class="card-content" style="padding: 25px;">
+						<h3>Manufacturer</h3>
+						<a href="manufacturer.html" class="btn" style="display:flow;background-color: #3f5578;">Click Here</a>
+					</div>
+				</div>
+				<div class="card" style="height: 350px;">
+					<img src="image/supplier.jpeg" style="height: 200px;">
+					<div class="card-content" style="padding: 25px;">
+						<h3>Seller</h3>
+						<a href="seller.html" class="btn" style="display:flow;background-color: #3f5578;">Click Here</a>
+					</div>
+				</div>
+				<div class="card" style="height: 350px;">
+					<img src="image/consumer.jpeg" style="height: 200px;">
+					<div class="card-content" style="padding: 25px;">
+						<h3>Consumer</h3>
+						<a href="consumer.html" class="btn" style="display:flow;background-color: #3f5578;">Click Here</a>
+					</div>
+				</div>
+			</div>
+			
+			<!--End card-->
+			<footer style="text-align: center; padding: 20px 0; background-color:  #3f5578;">
+				<div class="container" style="display: flex; flex-direction: column; align-items: center;">
+					<div class="icons" style="margin-bottom: 20px;">
+						<a href="https://www.facebook.com/" class="sociallogos" target="_blank"><img src="image/facebook.png" alt="facebook" width="2.5%" style="margin-right: 10px;"></a>
+						<a href="https://www.instagram.com" class="sociallogos" target="_blank"><img src="image/instagram.png" alt="instagram" width="2.5%" style="margin-right: 10px;"></a>
+						<a href="https://www.twitter.com" class="sociallogos" target="_blank"><img src="image/twitter.png" alt="twitter" width="2.5%" style="margin-right: 10px;"></a>
+					</div>
+					<ul class="list-inline" style="padding: 0; margin: 0;">
+						<li class="list-inline-item" style="display: inline-block; margin-right: 10px;"><a href="index.html" style="color: white;">Home</a></li>
+						<li class="list-inline-item" style="display: inline-block; margin-right: 10px;"><a href="about.html" style="color: white;">About</a></li>
+						<li class="list-inline-item" style="display: inline-block; margin-right: 10px;"><a href="#" style="color: white;">Terms</a></li>
+						<li class="list-inline-item" style="display: inline-block; margin-right: 10px;"><a href="#" style="color: white;">Privacy Policy</a></li>
+					</ul>
+					<p class="copyright" style="margin-top: 10px; color: white;">AushadhiScan © 2024</p>
+
+					<p class="copyright" style="margin-top: -20px; color: white;">(Committed to Excellence in Healthcare)</p>
+				</div>
+			</footer>
+
+
+		
+	</div>
+
+	
+
+						<!-- <a class="navbar-brand" href="index.html">Welcome to MediexLedger</a> -->
+					<!-- </div>
+					<div class="col-md-6 d-md-flex justify-content-end mb-md-0 mb-3">
+						<!-- <form action="#" class="searchform order-lg-last"> -->
+							
+							
+
+			<script src="js/jquery.min.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+			<script src="js/main.js"></script>
+			<script src="js/web3.min.js"></script>
+			<script src="js/truffle-contract.js"></script>
+
+</body>
+
+</html>
